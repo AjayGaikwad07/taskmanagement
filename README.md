@@ -54,39 +54,6 @@ Copy code
   "message": "User registered successfully."
 }
 
-
-Postman API Documentation: Task Management System 📬
-This document provides a guide for testing the Task Management System APIs using Postman. Each endpoint corresponds to the CRUD operations in the application and includes details such as request type, request body, and expected responses.
-
-Table of Contents
-Getting Started with Postman
-Authentication Endpoints
-Register a New User
-User Login
-Task Management Endpoints
-Create a New Task
-Fetch All Tasks
-Fetch a Single Task by ID
-Update a Task
-Delete a Task
-Global Exception Handling
-Postman Collection File
-Getting Started with Postman
-Install Postman if you haven’t already: Download Postman.
-Create a New Request for each of the endpoints listed below.
-Set up the Base URL: Replace localhost with your EC2 instance’s public DNS (e.g., http://ec2-xx-xxx-xxx-xxx.compute-1.amazonaws.com) if running on AWS.
-Base URL
-For local testing:
-
-arduino
-Copy code
-http://localhost:8080
-For AWS EC2 deployment:
-
-arduino
-Copy code
-http://ec2-xx-xxx-xxx-xxx.compute-1.amazonaws.com
-Authentication Endpoints
 1. Register a New User
 Endpoint: /register
 
