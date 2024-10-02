@@ -30,7 +30,7 @@ Restricted pages: /user/tasks/** (only accessible after login).
 Used Technologies: Java, Spring Boot, Maven, Hibernate, MySQL, Apache Tomcat, Spring Security, Thymeleaf, Html, css, Javascript, Bootstrap.
 -------------------------------------------------------------------------------------------------
 PostMan: 
-
+-----------------------------------------------------
 Authentication Endpoints
 1. Register a New User
 Endpoint: /register
