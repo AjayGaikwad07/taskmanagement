@@ -25,7 +25,7 @@ Public pages: /register, /login, and landing page.
 Restricted pages: /user/tasks/** (only accessible after login).
 
 Used Technologies: Java, Spring Boot, Maven, Hibernate, MySQL, Apache Tomcat, Spring Security, Thymeleaf, Html, css, Javascript, Bootstrap.
-
+-------------------------------------------------------------------------------------------------
 PostMan: 
 
 Authentication Endpoints
