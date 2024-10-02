@@ -3,7 +3,9 @@ The Task Management Application is a simple CRUD-based web application built usi
 log in, and manage their own tasks. Each user has their own list of tasks, and the application provides functionality to create, update, view, and delete tasks. 
 It also includes Spring Security for user authentication and authorization.
 
-Note: Screenshot folder into project : https://github.com/AjayGaikwad07/taskmanagement/tree/master/Screenshot_Task_Management
+Note: Screenshot folder into project : 
+---------------------------------------------------------------
+https://github.com/AjayGaikwad07/taskmanagement/tree/master/Screenshot_Task_Management
 
 Open a browser and go to http://localhost:8080 to access the application.
 Landing Page link: http://localhost:8080
