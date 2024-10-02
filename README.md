@@ -1,4 +1,5 @@
-Project Overview
+Project Overview:
+-----------------------------------------------------------------
 The Task Management Application is a simple CRUD-based web application built using Spring Boot. It allows users to register,
 log in, and manage their own tasks. Each user has their own list of tasks, and the application provides functionality to create, update, view, and delete tasks. 
 It also includes Spring Security for user authentication and authorization.
