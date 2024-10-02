@@ -40,6 +40,7 @@ PostMan:
 -----------------------------------------------------
 Authentication Endpoints
 1. Register a New User
+---------------------
 Endpoint: /register
 
 Method: POST
@@ -64,75 +65,33 @@ Copy code
   "message": "User registered successfully."
 }
 
-1. Register a New User
-Endpoint: /register
 
-Method: POST
-
-Request URL:
-
-bash
-Copy code
-http://localhost:8080/register
-Headers:
-
-Key	Value
-Content-Type	application/json
-Request Body:
-
-json
-Copy code
-{
-  "username": "john_doe",
-  "password": "password123"
-}
-Response:
-
-201 Created: If registration is successful.
-400 Bad Request: If the username is already taken.
-Example Response:
-
-json
-Copy code
-{
-  "message": "User registered successfully."
-}
 2. User Login
+--------------------------
 Endpoint: /login
 
 Method: POST
 
-Request URL:
-
-bash
-Copy code
-http://localhost:8080/login
+Request URL: http://localhost:8080/login
 Headers:
-
-Key	Value
-Content-Type	application/x-www-form-urlencoded
-Request Body (Form-Encoded):
+key 
 
 username: The registered username.
 password: The registered password.
+
 Key	Value
-username	john_doe
+username	ajaygaikwad3131@gmail.com
 password	password123
 Response:
 
-200 OK: If login is successful.
-401 Unauthorized: If the credentials are invalid.
 Task Management Endpoints
 1. Create a New Task
+-------------------------------
 Endpoint: /user/tasks
 
 Method: POST
 
-Request URL:
-
-bash
-
-http://localhost:8080/user/tasks
+Request URL: http://localhost:8080/user/tasks
 Headers:
 Key	Value
 Content-Type	application/json
@@ -161,15 +120,10 @@ json
 }
 
 2. Fetch All Tasks
+-----------------------------
 Endpoint: /user/tasks
 Method: GET
-Request URL:
-
-bash
-
-http://localhost:8080/user/tasks
-
-Example Response:
+Request URL: http://localhost:8080/user/tasks
 
 json
 
@@ -186,3 +140,63 @@ json
     }
   }
 ]
+
+3. Fetch a Single Task by ID
+------------------------------------
+Endpoint: /user/tasks/{id}
+
+Method: GET
+
+Request URL: http://localhost:8080/user/tasks/1
+Response:
+
+json
+
+{
+  "id": 1,
+  "name": "New Task",
+  "description": "This is a new task to complete.",
+  "completed": false,
+  "taskDateTime": "2024-10-01T15:00:00",
+  "user": {
+    "username": "john_doe"
+  }
+}
+
+
+4. Update a Task
+----------------------------
+Endpoint: /user/tasks/update
+
+Method: POST
+Request URL: http://localhost:8080/user/tasks/update
+Headers:
+
+Content-Type	application/json
+Request Body:
+
+json
+
+{
+  "id": 1,
+  "name": "Updated Task Name",
+  "description": "This task has been updated.",
+  "completed": true,
+  "taskDateTime": "2024-10-01T15:00:00",
+  "completedDateTime": "2024-10-02T10:30:00"
+}
+Response:
+
+5. Delete a Task
+------------------------
+Endpoint: /user/tasks/delete/{id}
+
+Method: GET
+Request URL: http://localhost:8080/user/tasks/delete/1
+Response:
+
+json
+
+{
+  "message": "Task deleted successfully."
+}
