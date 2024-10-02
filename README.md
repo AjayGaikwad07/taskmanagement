@@ -15,12 +15,19 @@ Register page: http://localhost:8080/register
 login page: http://localhost:8080/login
 
 Common Endpoints
+-------------------
 /register - Register a new user.
+------------------
 /login - Login page.
+-------------------
 /user/tasks - View tasks.
+-------------------
 /user/tasks/new - Add a new task.
+-----------------
 /user/tasks/edit/{id} - Edit an existing task.
+-------------------
 /user/tasks/delete/{id} - Delete a task.
+------------------
 
 Security Configuration
 The application uses Spring Security for authentication.
