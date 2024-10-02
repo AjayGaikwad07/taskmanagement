@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Task</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Edit Task</h2>
+    <form th:action="@{'/user/tasks/' + ${task.id}}" method="post">
+        <input type="hidden" th:field="*{id}"/>  <!-- Hidden field to pass the task ID -->
+        <label for="name">Task Name:</label>
+        <input type="text" id="name" name="name" th:value="${task.name}" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required th:text="${task.description}"></textarea>
+
+        <label for="taskDateTime">Task Start Date/Time:</label>
+        <input type="datetime-local" id="taskDateTime" name="taskDateTime" th:value="${#temporals.format(task.taskDateTime, 'yyyy-MM-dd''T''HH:mm')}">
+
+        <label for="completed">Completed:</label>
+        <input type="checkbox" id="completed" name="completed" th:checked="${task.completed}">
+
+        <label for="completedDateTime">Completed Date/Time:</label>
+        <input type="datetime-local" id="completedDateTime" name="completedDateTime"
+               th:value="${task.completedDateTime != null ? #temporals.format(task.completedDateTime, 'yyyy-MM-dd''T''HH:mm') : ''}" >
+
+        <button type="submit">Update Task</button>
+    </form>
+    <a href="/user/tasks">Back to Task List</a>
+</div>
+</body>
+</html>
