@@ -34,7 +34,7 @@ The application uses Spring Security for authentication.
 Public pages: /register, /login, and landing page.
 Restricted pages: /user/tasks/** (only accessible after login).
 
-Used Technologies: Java, Spring Boot, Maven, Hibernate, MySQL, Apache Tomcat, Spring Security, Thymeleaf, Html, css, Javascript, Bootstrap.
+Used Technologies: Java, Spring Boot, Maven, Hibernate, MySQL, Apache Tomcat, Spring Security, Thymeleaf, Html, CSS, JavaScript, Bootstrap.
 -------------------------------------------------------------------------------------------------
 PostMan: 
 -----------------------------------------------------
